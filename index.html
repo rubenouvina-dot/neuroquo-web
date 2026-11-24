@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NEUROQUO · Conocimiento e innovación en neurorrehabilitación</title>
+<link rel="canonical" href="https://neuroquo.es/">
+<link rel="icon" type="image/png" href="assets/logo-neuroquo-600.png">
+<meta property="og:title" content="NEUROQUO">
+<meta property="og:description" content="Ecosistema de conocimiento e innovación en neurorrehabilitación. NEUROQUO Experience 2027: 24 de septiembre.">
+<meta property="og:url" content="https://neuroquo.es/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta name="description" content="NEUROQUO, ecosistema de conocimiento e innovación en neurorrehabilitación. NEUROQUO Experience 2027: 24 de septiembre, Hotel H4.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: una sola columna editorial (≈1120px) con bandas a todo el ancho; la línea turquesa de la Q
+   recorre "del hospital a la vida" como hilo de continuidad. Display: Jost ligera (eco del logotipo);
+   texto: Noto Serif (dossier de marca). */
+:root {
+  --paper: #F4F8FA;
+  --surface: #FFFFFF;
+  --ink: #0E2742;
+  --muted: #4E6275;
+  --line: #D5E0E7;
+  --teal: #0E8A8A;
+  --cyan: #17A9BC;
+  --wash: #E4F2F2;
+  --band: #0E2742;
+  --band-ink: #EAF2F6;
+  --band-muted: #A9BDCB;
+  --f-display: "Jost", "Futura", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Noto Serif", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #08141F; --surface: #0E1E2D; --ink: #E7EEF3; --muted: #9DB0C0; --line: #20374A;
+    --teal: #3CC4BD; --cyan: #5BD0DE; --wash: #0F2A31; --band: #0B1A27; --band-ink: #EAF2F6; --band-muted: #A9BDCB;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #08141F; --surface: #0E1E2D; --ink: #E7EEF3; --muted: #9DB0C0; --line: #20374A;
+  --teal: #3CC4BD; --cyan: #5BD0DE; --wash: #0F2A31; --band: #0B1A27; --band-ink: #EAF2F6; --band-muted: #A9BDCB;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 76px); }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 17px; line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: -0.005em; }
+p { margin: 0; }
+a { color: var(--teal); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 2px; }
+.in { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.eyebrow { font-family: var(--f-display); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); }
+.lede { font-size: 1.12rem; color: var(--muted); max-width: 62ch; }
+section { padding-block: 88px; }
+.sec-head { display: grid; gap: 12px; margin-bottom: 40px; max-width: 760px; }
+.sec-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 300; line-height: 1.15; }
+
+/* Cabecera */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top .in { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; }
+.logo { display: block; width: 170px; height: auto; }
+.logo-dark { display: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo-light { display: none; } :root:not([data-theme="light"]) .logo-dark { display: block; } }
+:root[data-theme="dark"] .logo-light { display: none; }
+:root[data-theme="dark"] .logo-dark { display: block; }
+nav ul { display: flex; flex-wrap: wrap; gap: 6px 26px; list-style: none; margin: 0; padding: 0; font-family: var(--f-display); font-size: 0.95rem; }
+nav a { color: var(--ink); text-decoration: none; }
+nav a:hover { color: var(--teal); }
+@media (max-width: 860px) { nav { display: none; } }
+
+/* Portada */
+.hero { padding-block: 96px 72px; background: var(--surface); border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+.hero .in { display: grid; gap: 34px; position: relative; }
+.hero blockquote { margin: 0; font-family: var(--f-body); font-style: italic; font-size: clamp(1.7rem, 3.6vw, 2.75rem); line-height: 1.28; max-width: 24ch; color: var(--ink); }
+.hero blockquote em { font-style: italic; color: var(--teal); }
+.hero .lede { font-size: 1.2rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: center; }
+.btn { font-family: var(--f-display); font-size: 1rem; font-weight: 500; text-decoration: none; padding: 13px 22px; border-radius: 999px; border: 1px solid var(--teal); color: var(--teal); background: transparent; cursor: pointer; display: inline-flex; gap: 10px; align-items: center; }
+.btn.solid { background: var(--teal); color: var(--surface); }
+.btn:hover { filter: brightness(1.08); }
+.hero-wave { position: absolute; right: -60px; top: 40px; width: min(48vw, 560px); height: auto; opacity: 0.9; pointer-events: none; }
+@media (max-width: 760px) { .hero-wave { opacity: 0.25; right: -120px; } }
+
+/* Del hospital a la vida */
+.ruta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; position: relative; }
+.ruta svg.hilo { position: absolute; left: 0; right: 0; top: 30px; width: 100%; height: 70px; overflow: visible; }
+.etapa { position: relative; padding: 0 22px 0 0; display: grid; gap: 10px; align-content: start; }
+.etapa .punto { width: 22px; height: 22px; border-radius: 50%; background: var(--paper); border: 3px solid var(--teal); position: relative; z-index: 1; margin-top: 52px; }
+.etapa.centro .punto { background: var(--teal); }
+.etapa h3 { font-size: 1.5rem; font-weight: 400; margin-top: 8px; }
+.etapa p { color: var(--muted); font-size: 0.98rem; }
+.etapa .verbos { font-family: var(--f-display); font-size: 0.86rem; letter-spacing: 0.04em; color: var(--teal); }
+.ruta-nota { margin-top: 44px; max-width: 70ch; }
+@media (max-width: 760px) {
+  .ruta { grid-template-columns: 1fr; gap: 28px; border-left: 3px solid var(--teal); margin-left: 10px; padding-left: 24px; }
+  .ruta svg.hilo { display: none; }
+  .etapa .punto { position: absolute; left: -37px; top: 6px; margin: 0; }
+}
+
+/* Ecosistema */
+.espacios { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.espacio { padding: 26px 20px 26px 0; display: grid; gap: 8px; align-content: start; border-bottom: 1px solid var(--line); }
+.espacio + .espacio { padding-left: 20px; border-left: 1px solid var(--line); }
+.espacio h3 { font-size: 1.3rem; font-weight: 500; letter-spacing: 0.04em; }
+.espacio .verbo { font-family: var(--f-display); font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); }
+.espacio p { font-size: 0.95rem; color: var(--muted); }
+.estado { justify-self: start; font-family: var(--f-display); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.estado.vivo { border-color: var(--teal); color: var(--teal); }
+@media (max-width: 960px) { .espacios { grid-template-columns: 1fr 1fr; } .espacio + .espacio { border-left: 0; padding-left: 0; } .espacio { padding-right: 20px; } }
+@media (max-width: 520px) { .espacios { grid-template-columns: 1fr; } }
+
+/* Experience 2027 (banda) */
+.band { background: var(--band); color: var(--band-ink); }
+.band .eyebrow { color: var(--cyan); }
+.band .lede { color: var(--band-muted); }
+.band h2, .band h3 { color: var(--band-ink); }
+.exp { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+@media (max-width: 860px) { .exp { grid-template-columns: 1fr; gap: 36px; } }
+.fecha { display: grid; gap: 4px; padding: 22px 0; border-top: 1px solid rgba(169, 189, 203, 0.3); border-bottom: 1px solid rgba(169, 189, 203, 0.3); margin-top: 28px; }
+.fecha b { font-family: var(--f-display); font-weight: 300; font-size: clamp(2rem, 4.4vw, 3.2rem); line-height: 1.05; letter-spacing: -0.01em; }
+.fecha span { color: var(--band-muted); font-family: var(--f-display); }
+.hechos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; margin-top: 26px; font-family: var(--f-display); }
+.hechos div { display: grid; gap: 2px; }
+.hechos strong { font-weight: 500; font-size: 1.05rem; }
+.hechos span { color: var(--band-muted); font-size: 0.92rem; }
+.mesas { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: m; }
+.mesas li { counter-increment: m; display: grid; grid-template-columns: 48px 1fr; gap: 2px 14px; padding: 16px 0; border-bottom: 1px solid rgba(169, 189, 203, 0.22); }
+.mesas li::before { content: counter(m); grid-row: span 2; font-family: var(--f-display); font-weight: 300; font-size: 2rem; line-height: 1; color: var(--cyan); }
+.mesas b { font-family: var(--f-display); font-weight: 500; font-size: 1.1rem; }
+.mesas span { color: var(--band-muted); font-size: 0.95rem; font-style: italic; }
+.formato { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.formato span { font-family: var(--f-display); font-size: 0.85rem; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(169, 189, 203, 0.4); color: var(--band-ink); }
+.band .btn { border-color: var(--cyan); color: var(--cyan); }
+.aviso-insc { margin-top: 26px; display: grid; gap: 12px; justify-items: start; }
+.aviso-insc p { color: var(--band-muted); font-size: 0.95rem; }
+
+/* Una persona, muchas miradas */
+.miradas { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+@media (max-width: 860px) { .miradas { grid-template-columns: 1fr; gap: 32px; } }
+.principio { font-family: var(--f-body); font-style: italic; font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.4; border-left: 3px solid var(--teal); padding-left: 22px; }
+.problemas { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.problema { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 6px 22px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.problema h3 { font-size: 1.12rem; font-weight: 500; }
+.problema p { color: var(--muted); font-size: 0.95rem; font-family: var(--f-display); }
+@media (max-width: 520px) { .problema { grid-template-columns: 1fr; } }
+
+/* Independencia */
+.indep { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.compromisos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 34px; }
+@media (max-width: 860px) { .compromisos { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .compromisos { grid-template-columns: 1fr; } }
+.compromiso { display: grid; gap: 8px; align-content: start; padding-top: 14px; border-top: 2px solid var(--teal); }
+.compromiso h3 { font-size: 1.1rem; font-weight: 500; }
+.compromiso p { font-size: 0.95rem; color: var(--muted); }
+.creditos { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); display: grid; gap: 10px; }
+.creditos .lista { display: flex; flex-wrap: wrap; gap: 6px 26px; font-family: var(--f-display); font-size: 0.95rem; color: var(--muted); }
+.creditos .lista b { color: var(--ink); font-weight: 500; }
+.coi { font-style: italic; font-size: 0.8rem; line-height: 1.5; color: var(--muted); max-width: 90ch; }
+
+/* Contacto */
+.contacto { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+@media (max-width: 860px) { .contacto { grid-template-columns: 1fr; } }
+.canal { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; display: grid; gap: 10px; align-content: start; }
+.canal h3 { font-size: 1.2rem; font-weight: 500; }
+.canal p { color: var(--muted); font-size: 0.95rem; }
+.correo { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; font-family: var(--f-display); }
+.correo code { font-family: var(--f-display); font-size: 1rem; color: var(--ink); user-select: all; }
+.copiar { font-family: var(--f-display); font-size: 0.8rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--teal); cursor: pointer; }
+
+/* Pie */
+footer { padding-block: 40px 56px; border-top: 1px solid var(--line); font-family: var(--f-display); font-size: 0.88rem; color: var(--muted); }
+footer .in { display: grid; gap: 16px; }
+.pie-fila { display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: space-between; align-items: center; }
+.pie-fila ul { display: flex; flex-wrap: wrap; gap: 6px 20px; list-style: none; margin: 0; padding: 0; }
+.pie-fila a { color: var(--muted); }
+.lema { font-family: var(--f-body); font-style: italic; color: var(--ink); }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .hilo path.trazo { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: trazo 2.4s 0.3s ease-out forwards; }
+  @keyframes trazo { to { stroke-dashoffset: 0; } }
+}
+</style>
+<style>html,body{margin:0;padding:0}img{max-width:100%}</style>
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <a href="#inicio" aria-label="NEUROQUO, inicio">
+      <img class="logo logo-light" src="assets/logo-neuroquo-600.png" alt="NEUROQUO" width="600" height="107">
+      <img class="logo logo-dark" src="assets/logo-neuroquo-oscuro-600.png" alt="NEUROQUO" width="600" height="107">
+    </a>
+    <nav aria-label="Secciones">
+      <ul>
+        <li><a href="#vida-real">Del hospital a la vida</a></li>
+        <li><a href="#ecosistema">Ecosistema</a></li>
+        <li><a href="#experience">Experience 2027</a></li>
+        <li><a href="#independencia">Independencia</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <svg class="hero-wave" viewBox="0 0 560 420" aria-hidden="true">
+      <defs>
+        <linearGradient id="q" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" style="stop-color: var(--cyan)"/><stop offset="1" style="stop-color: var(--teal)"/>
+        </linearGradient>
+      </defs>
+      <circle cx="330" cy="190" r="150" fill="none" stroke="url(#q)" stroke-width="22" stroke-dasharray="760 200" stroke-linecap="round" opacity="0.16"/>
+      <path d="M180 300 C 250 230, 300 250, 345 320 S 450 400, 540 330" fill="none" stroke="url(#q)" stroke-width="22" stroke-linecap="round" opacity="0.2"/>
+    </svg>
+    <div class="in">
+      <p class="eyebrow">Conocimiento e innovación en neurorrehabilitación</p>
+      <blockquote>«Una persona con una discapacidad de origen neurológico no tiene un problema médico, terapéutico o técnico. <em>Tiene una vida que ha cambiado.</em>»</blockquote>
+      <p class="lede">NEUROQUO conecta medicina, terapias, cuidados, ortopedia técnica, tecnología e investigación alrededor de lo que de verdad importa: la autonomía y la participación de la persona fuera del centro sanitario.</p>
+      <div class="hero-meta">
+        <a class="btn solid" href="#experience">NEUROQUO Experience · 24 de septiembre de 2027</a>
+        <a class="btn" href="#ecosistema">Qué es NEUROQUO</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="vida-real">
+    <div class="in">
+      <div class="sec-head">
+        <p class="eyebrow">Continuidad</p>
+        <h2>Del hospital a la vida</h2>
+        <p class="lede">Las decisiones más difíciles no se toman en un solo lugar. NEUROQUO trabaja en las transiciones: donde la decisión clínica tiene que convertirse en una solución que funcione en casa, y donde la rehabilitación demuestra que mejora la vida real.</p>
+      </div>
+      <div class="ruta">
+        <svg class="hilo" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true">
+          <path class="trazo" d="M10 41 C 180 41, 230 10, 345 41 S 520 70, 680 41 S 880 20, 990 41" fill="none" style="stroke: var(--teal)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        </svg>
+        <div class="etapa">
+          <span class="punto" aria-hidden="true"></span>
+          <h3>Hospital</h3>
+          <p class="verbos">Estabilizar · tratar · iniciar</p>
+          <p>La fase aguda y la neurorrehabilitación hospitalaria, donde empiezan las decisiones que acompañarán a la persona durante años.</p>
+        </div>
+        <div class="etapa centro">
+          <span class="punto" aria-hidden="true"></span>
+          <h3>Domicilio</h3>
+          <p class="verbos">Adaptar · entrenar · cuidar</p>
+          <p>Transferencias, sedestación, comunicación y cuidados en un entorno real, con la familia y con recursos que no siempre llegan.</p>
+        </div>
+        <div class="etapa">
+          <span class="punto" aria-hidden="true"></span>
+          <h3>Comunidad</h3>
+          <p class="verbos">Participar · trabajar · disfrutar</p>
+          <p>El proyecto de vida: volver a estudiar o trabajar, moverse por la ciudad y decidir sobre la propia vida.</p>
+        </div>
+      </div>
+      <p class="ruta-nota">Por eso conectamos prescripción, adaptación, entrenamiento y reevaluación, y medimos el desempeño en casa y en la comunidad, no solo la capacidad en consulta.</p>
+    </div>
+  </section>
+
+  <section id="ecosistema" style="padding-top: 0;">
+    <div class="in">
+      <div class="sec-head">
+        <p class="eyebrow">Arquitectura</p>
+        <h2>Cinco espacios, un único ecosistema</h2>
+        <p class="lede">Aprender, experimentar, medir, compartir y conectar. Empezamos por el encuentro presencial y abriremos el resto de espacios cuando tengan la estructura para cumplir lo que prometen.</p>
+      </div>
+      <div class="espacios">
+        <div class="espacio">
+          <span class="verbo">Aprender</span>
+          <h3>ACADEMY</h3>
+          <p>Formación rigurosa y práctica: cursos, talleres, sesiones clínicas y programas avanzados.</p>
+          <span class="estado">En preparación</span>
+        </div>
+        <div class="espacio">
+          <span class="verbo">Experimentar</span>
+          <h3>LAB</h3>
+          <p>Problemas reales de movilidad, sedestación, ortesis, comunicación, domicilio y tecnología, resueltos en equipo.</p>
+          <span class="estado">En preparación</span>
+        </div>
+        <div class="espacio">
+          <span class="verbo">Medir</span>
+          <h3>RESEARCH</h3>
+          <p>Investigación aplicada y resultados en vida real, con hospitales, universidades y grupos de investigación.</p>
+          <span class="estado">En preparación</span>
+        </div>
+        <div class="espacio">
+          <span class="verbo">Compartir</span>
+          <h3>EXPERIENCE</h3>
+          <p>El gran encuentro presencial: casos, debate, talleres, tecnología y la voz de pacientes y familias.</p>
+          <span class="estado vivo">24 de septiembre de 2027</span>
+        </div>
+        <div class="espacio">
+          <span class="verbo">Conectar</span>
+          <h3>COMMUNITY</h3>
+          <p>Una red profesional activa todo el año para compartir conocimiento, proyectos y colaboración.</p>
+          <span class="estado">En preparación</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="band">
+    <div class="in exp">
+      <div>
+        <p class="eyebrow">Primera edición</p>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.1;">NEUROQUO Experience 2027</h2>
+        <p class="lede" style="margin-top: 16px;">Una jornada sin ponencias consecutivas. Todas las disciplinas trabajan sobre un mismo caso, votan en equipo y se llevan herramientas que pueden aplicar el lunes.</p>
+        <div class="fecha">
+          <b>24 de septiembre de 2027</b>
+          <span>Hotel H4 · de 8:30 a 19:30, con cóctel de cierre</span>
+        </div>
+        <div class="hechos">
+          <div><strong>50 a 60 plazas</strong><span>Reservadas por disciplina, para que ninguna profesión ocupe la sala</span></div>
+          <div><strong>Equipos mixtos de 6</strong><span>Cada asistente forma parte de un equipo interdisciplinar desde la inscripción</span></div>
+          <div><strong>Un caso conductor</strong><span>Del ingreso a la vuelta a casa, adaptado para que no sea reconocible</span></div>
+          <div><strong>Del hospital a la vida</strong><span>Eje temático de la primera edición</span></div>
+        </div>
+        <div class="aviso-insc">
+          <p>Las inscripciones se abrirán en la primavera de 2027.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size: 1.05rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--band-muted); margin-bottom: 6px;">Cuatro mesas de decisión</h3>
+        <ol class="mesas">
+          <li><b>Comprender</b><span>¿Cómo se rehabilita a quien no siempre puede colaborar?</span></li>
+          <li><b>Sostener</b><span>Sin control de tronco y con un hombro doloroso: ¿qué sedestación necesita?</span></li>
+          <li><b>Expresarse</b><span>¿Cómo damos voz a quien entiende pero no puede hablar?</span></li>
+          <li><b>Vivir</b><span>Escaleras, un baño estrecho y pocos recursos: ¿qué hace falta para volver a casa?</span></li>
+        </ol>
+        <div class="formato" aria-label="Formato de la jornada">
+          <span>Votación por equipos</span><span>4 LAB prácticos</span><span>Casos cruzados</span><span>Circuito Vida Real</span><span>Gran final</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="miradas">
+    <div class="in miradas">
+      <div class="sec-head" style="margin-bottom: 0;">
+        <p class="eyebrow">Modelo NEUROQUO</p>
+        <h2>Una persona, muchas miradas</h2>
+        <p class="principio" style="margin-top: 18px;">No preguntamos primero qué producto, técnica o tecnología tenemos. Preguntamos qué problema de la persona queremos resolver.</p>
+      </div>
+      <div class="problemas">
+        <div class="problema"><h3>Movimiento y tono</h3><p>Medicina rehabilitadora · neurología · fisioterapia · ortesis · FES</p></div>
+        <div class="problema"><h3>Posición y movilidad</h3><p>Medicina rehabilitadora · terapia ocupacional · fisioterapia · ortopedia técnica · sedestación</p></div>
+        <div class="problema"><h3>Comunicación, cognición y deglución</h3><p>Logopedia · neuropsicología · medicina · enfermería · SAAC</p></div>
+        <div class="problema"><h3>Vida cotidiana y participación</h3><p>Terapia ocupacional · enfermería y TCAE · familia · accesibilidad · trabajo y ocio</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="independencia" class="indep">
+    <div class="in">
+      <div class="sec-head">
+        <p class="eyebrow">Credibilidad</p>
+        <h2>Independencia, por escrito</h2>
+        <p class="lede">El apoyo de la industria hace posible lo que hacemos. Las conclusiones las decide el criterio científico, y lo decimos abiertamente.</p>
+      </div>
+      <div class="compromisos">
+        <div class="compromiso"><h3>Declaración de intereses</h3><p>Ponentes, moderadores, facilitadores y dirección científica publican sus conflictos de interés.</p></div>
+        <div class="compromiso"><h3>Patrocinio sin decisión</h3><p>Los patrocinadores aportan tecnología y equipamiento, pero no eligen ponentes ni revisan conclusiones. Figura en cada acuerdo.</p></div>
+        <div class="compromiso"><h3>Comparar sin marcas</h3><p>Los criterios se fijan antes de conocer el resultado. En el Circuito Vida Real, las sillas compiten sin logotipos.</p></div>
+        <div class="compromiso"><h3>Gestión independiente</h3><p>Inscripciones, cuotas, acreditación y votaciones las lleva una secretaría técnica independiente.</p></div>
+        <div class="compromiso"><h3>Voz equitativa, medida</h3><p>Se publica el tiempo de palabra de cada disciplina. Ninguna abre ni cierra los debates por defecto.</p></div>
+        <div class="compromiso"><h3>Patrocinio diversificado</h3><p>Buscamos varios patrocinadores para que ninguna actividad dependa de un único financiador.</p></div>
+      </div>
+      <div class="creditos">
+        <div class="lista">
+          <span><b>Organiza:</b> NEUROQUO</span>
+          <span><b>Dirección científica:</b> Rubén Ouviña</span>
+          <span><b>Secretaría técnica:</b> TRAMA</span>
+          <span><b>Patrocinador principal:</b> Exclusivas Iglesias</span>
+        </div>
+        <p class="coi">Declaración de la dirección científica: titular de la marca NEUROQUO y organizador de la jornada; vínculo familiar directo con la propiedad de Exclusivas Iglesias, patrocinador principal.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="in">
+      <div class="sec-head">
+        <p class="eyebrow">Contacto</p>
+        <h2>Hablemos</h2>
+        <p class="lede">Si quieres participar como panelista o facilitador, colaborar desde tu institución o apoyar la jornada, escríbenos.</p>
+      </div>
+      <div class="contacto">
+        <div class="canal">
+          <h3>Profesionales</h3>
+          <p>Ponencias, mesas, LAB y equipo asesor por disciplina.</p>
+          <div class="correo"><code>hola@neuroquo.es</code><button class="copiar" type="button" data-copiar="hola@neuroquo.es">Copiar</button></div>
+        </div>
+        <div class="canal">
+          <h3>Empresas y patrocinio</h3>
+          <p>Tecnología, equipamiento y zona CONNECT, con las reglas de independencia por escrito.</p>
+          <div class="correo"><code>patrocinio@neuroquo.es</code><button class="copiar" type="button" data-copiar="patrocinio@neuroquo.es">Copiar</button></div>
+        </div>
+        <div class="canal">
+          <h3>Inscripciones y logística</h3>
+          <p>Las gestiona TRAMA, secretaría técnica. El enlace de inscripción se publicará aquí en la primavera de 2027.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <div class="pie-fila">
+      <span class="lema">Conocimiento que se conecta. Innovación que se demuestra. Soluciones que llegan a la vida real.</span>
+    </div>
+    <div class="pie-fila">
+      <span>NEUROQUO™ · © 2026</span>
+      <ul>
+        <li><a href="#contacto">Aviso legal</a></li>
+        <li><a href="#contacto">Privacidad</a></li>
+        <li><a href="#contacto">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copiar').forEach((b) => {
+  b.addEventListener('click', () => {
+    const t = b.dataset.copiar;
+    const ok = () => { b.textContent = 'Copiado'; setTimeout(() => (b.textContent = 'Copiar'), 1600); };
+    try {
+      navigator.clipboard.writeText(t).then(ok, () => seleccionar(b));
+    } catch { seleccionar(b); }
+  });
+});
+function seleccionar(b) {
+  const code = b.previousElementSibling;
+  const r = document.createRange(); r.selectNodeContents(code);
+  const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+}
+</script>
+
+</body></html>
