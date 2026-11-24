@@ -75,7 +75,7 @@ nav a:hover { color: var(--teal); }
 
 /* Portada */
 .hero { padding-block: 96px 72px; background: var(--surface); border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
-.hero .in { display: grid; gap: 34px; position: relative; }
+.hero .in { display: grid; gap: 40px; position: relative; }
 .hero blockquote { margin: 0; font-family: var(--f-body); font-style: italic; font-size: clamp(1.7rem, 3.6vw, 2.75rem); line-height: 1.28; max-width: 24ch; color: var(--ink); }
 .hero blockquote em { font-style: italic; color: var(--teal); }
 .hero .lede { font-size: 1.2rem; }
@@ -180,6 +180,29 @@ footer .in { display: grid; gap: 16px; }
 .pie-fila a { color: var(--muted); }
 .lema { font-family: var(--f-body); font-style: italic; color: var(--ink); }
 
+/* Imágenes */
+.foto { display: block; width: 100%; height: auto; border-radius: 10px; background: var(--wash); object-fit: cover; }
+.hero .in { grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); align-items: center; column-gap: 56px; }
+.hero-txt { display: grid; gap: 34px; }
+.hero-foto { position: relative; z-index: 1; }
+.hero-foto .foto { aspect-ratio: 4 / 5; box-shadow: 0 24px 60px -30px rgba(14, 39, 66, 0.45); }
+@media (max-width: 860px) {
+  .hero .in { grid-template-columns: 1fr; }
+  .hero-foto .foto { aspect-ratio: 4 / 3; object-position: 50% 30%; }
+}
+.etapa .foto { aspect-ratio: 3 / 2; margin-top: 14px; }
+.exp-foto { margin-bottom: 56px; }
+.exp-foto .foto { aspect-ratio: 21 / 9; border-radius: 12px; }
+@media (max-width: 760px) { .exp-foto .foto { aspect-ratio: 16 / 10; } .exp-foto { margin-bottom: 36px; } }
+.nota-ia { font-size: 0.8rem; }
+
+/* Cuenta atrás */
+.cuenta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; font-family: var(--f-display); }
+.cuenta div { min-width: 82px; padding: 12px 14px 10px; border: 1px solid rgba(169, 189, 203, 0.35); border-radius: 10px; display: grid; gap: 2px; justify-items: center; }
+.cuenta b { font-weight: 300; font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1; color: var(--cyan); font-variant-numeric: tabular-nums; }
+.cuenta span { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--band-muted); }
+.cuenta-txt { margin-top: 10px; font-family: var(--f-display); font-size: 0.9rem; color: var(--band-muted); }
+
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
   .hilo path.trazo { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: trazo 2.4s 0.3s ease-out forwards; }
@@ -219,6 +242,7 @@ footer .in { display: grid; gap: 16px; }
       <path d="M180 300 C 250 230, 300 250, 345 320 S 450 400, 540 330" fill="none" stroke="url(#q)" stroke-width="22" stroke-linecap="round" opacity="0.2"/>
     </svg>
     <div class="in">
+     <div class="hero-txt">
       <p class="eyebrow">Conocimiento e innovación en neurorrehabilitación</p>
       <blockquote>«Una persona con una discapacidad de origen neurológico no tiene un problema médico, terapéutico o técnico. <em>Tiene una vida que ha cambiado.</em>»</blockquote>
       <p class="lede">NEUROQUO conecta medicina, terapias, cuidados, ortopedia técnica, tecnología e investigación alrededor de lo que de verdad importa: la autonomía y la participación de la persona fuera del centro sanitario.</p>
@@ -226,6 +250,10 @@ footer .in { display: grid; gap: 16px; }
         <a class="btn solid" href="#experience">NEUROQUO Experience · 24 de septiembre de 2027</a>
         <a class="btn" href="#ecosistema">Qué es NEUROQUO</a>
       </div>
+     </div>
+     <div class="hero-foto">
+      <img class="foto" src="img/portada-640.webp" srcset="img/portada-640.webp 640w, img/portada-1100.webp 1100w" sizes="(max-width: 860px) 92vw, 400px" width="640" height="795" alt="Una profesional sostiene con las dos manos la mano de un hombre en silla de ruedas, en una sala de rehabilitación luminosa." fetchpriority="high">
+     </div>
     </div>
   </section>
 
@@ -245,18 +273,21 @@ footer .in { display: grid; gap: 16px; }
           <h3>Hospital</h3>
           <p class="verbos">Estabilizar · tratar · iniciar</p>
           <p>La fase aguda y la neurorrehabilitación hospitalaria, donde empiezan las decisiones que acompañarán a la persona durante años.</p>
+          <img class="foto" src="img/hospital-600.webp" srcset="img/hospital-600.webp 600w, img/hospital-1100.webp 1100w" sizes="(max-width: 760px) 88vw, 340px" width="600" height="403" alt="Una mujer camina entre barras paralelas en un gimnasio de neurorrehabilitación, acompañada por su fisioterapeuta." loading="lazy">
         </div>
         <div class="etapa centro">
           <span class="punto" aria-hidden="true"></span>
           <h3>Domicilio</h3>
           <p class="verbos">Adaptar · entrenar · cuidar</p>
           <p>Transferencias, sedestación, comunicación y cuidados en un entorno real, con la familia y con recursos que no siempre llegan.</p>
+          <img class="foto" src="img/domicilio-600.webp" srcset="img/domicilio-600.webp 600w, img/domicilio-1100.webp 1100w" sizes="(max-width: 760px) 88vw, 340px" width="600" height="403" alt="En el salón de su casa, una terapeuta y una familiar ayudan a un hombre a pasar de la silla de ruedas al sofá." loading="lazy">
         </div>
         <div class="etapa">
           <span class="punto" aria-hidden="true"></span>
           <h3>Comunidad</h3>
           <p class="verbos">Participar · trabajar · disfrutar</p>
           <p>El proyecto de vida: volver a estudiar o trabajar, moverse por la ciudad y decidir sobre la propia vida.</p>
+          <img class="foto" src="img/comunidad-600.webp" srcset="img/comunidad-600.webp 600w, img/comunidad-1100.webp 1100w" sizes="(max-width: 760px) 88vw, 340px" width="600" height="403" alt="Una mujer joven en su silla de ruedas, sonriente, en una calle empedrada de un pueblo de la costa gallega." loading="lazy">
         </div>
       </div>
       <p class="ruta-nota">Por eso conectamos prescripción, adaptación, entrenamiento y reevaluación, y medimos el desempeño en casa y en la comunidad, no solo la capacidad en consulta.</p>
@@ -306,6 +337,9 @@ footer .in { display: grid; gap: 16px; }
   </section>
 
   <section id="experience" class="band">
+    <div class="in exp-foto">
+      <img class="foto" src="img/experience-1100.webp" srcset="img/experience-1100.webp 1100w, img/experience-1800.webp 1800w" sizes="(max-width: 1120px) 94vw, 1088px" width="1100" height="614" alt="Un equipo de seis profesionales sanitarios de distintas disciplinas trabaja alrededor de una mesa; uno levanta una tarjeta para votar." loading="lazy">
+    </div>
     <div class="in exp">
       <div>
         <p class="eyebrow">Primera edición</p>
@@ -315,6 +349,13 @@ footer .in { display: grid; gap: 16px; }
           <b>24 de septiembre de 2027</b>
           <span>Hotel H4 · de 8:30 a 19:30, con cóctel de cierre</span>
         </div>
+        <div class="cuenta" id="cuenta" role="timer" aria-label="Tiempo que falta para NEUROQUO Experience 2027" hidden>
+          <div><b data-u="d">0</b><span>días</span></div>
+          <div><b data-u="h">00</b><span>horas</span></div>
+          <div><b data-u="m">00</b><span>min</span></div>
+          <div><b data-u="s">00</b><span>seg</span></div>
+        </div>
+        <p class="cuenta-txt" id="cuenta-txt" hidden></p>
         <div class="hechos">
           <div><strong>50 a 60 plazas</strong><span>Reservadas por disciplina, para que ninguna profesión ocupe la sala</span></div>
           <div><strong>Equipos mixtos de 6</strong><span>Cada asistente forma parte de un equipo interdisciplinar desde la inscripción</span></div>
@@ -416,7 +457,7 @@ footer .in { display: grid; gap: 16px; }
       <span class="lema">Conocimiento que se conecta. Innovación que se demuestra. Soluciones que llegan a la vida real.</span>
     </div>
     <div class="pie-fila">
-      <span>NEUROQUO™ · © 2026 Homancan S.L.</span>
+      <span>NEUROQUO™ · © 2026 Homancan S.L. <span class="nota-ia">· Imágenes ilustrativas generadas con IA</span></span>
       <ul>
         <li><a href="aviso-legal.html">Aviso legal</a></li>
         <li><a href="privacidad.html">Privacidad</a></li>
@@ -427,6 +468,31 @@ footer .in { display: grid; gap: 16px; }
 </footer>
 
 <script>
+(() => {
+  // Cuenta atrás hasta el 24/09/2027 a las 8:30, hora peninsular (CEST, UTC+2).
+  const INICIO = Date.parse('2027-09-24T08:30:00+02:00');
+  const FIN = Date.parse('2027-09-24T19:30:00+02:00');
+  const caja = document.getElementById('cuenta');
+  const txt = document.getElementById('cuenta-txt');
+  if (!caja) return;
+  const el = (u) => caja.querySelector('[data-u="' + u + '"]');
+  const dos = (n) => String(n).padStart(2, '0');
+  let t;
+  function pinta() {
+    const ahora = Date.now();
+    if (ahora >= FIN) { caja.hidden = true; txt.hidden = false; txt.textContent = 'Gracias a todos los que hicisteis posible la primera edición.'; clearInterval(t); return; }
+    if (ahora >= INICIO) { caja.hidden = true; txt.hidden = false; txt.textContent = 'La jornada está en marcha.'; return; }
+    const r = Math.floor((INICIO - ahora) / 1000);
+    el('d').textContent = Math.floor(r / 86400);
+    el('h').textContent = dos(Math.floor(r / 3600) % 24);
+    el('m').textContent = dos(Math.floor(r / 60) % 60);
+    el('s').textContent = dos(r % 60);
+    caja.hidden = false;
+  }
+  pinta();
+  t = setInterval(pinta, 1000);
+})();
+
 document.querySelectorAll('.copiar').forEach((b) => {
   b.addEventListener('click', () => {
     const t = b.dataset.copiar;
