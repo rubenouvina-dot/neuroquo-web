@@ -1,0 +1,8 @@
+/* Fuentes alojadas en la propia web (sin conexiones a terceros). Licencia SIL OFL 1.1, ver fonts/. */
+@font-face{font-family:"Jost";font-style:normal;font-weight:300;font-display:swap;src:url("../fonts/jost-latin-300-normal.woff2") format("woff2")}
+@font-face{font-family:"Jost";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/jost-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Jost";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/jost-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"Jost";font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/jost-latin-600-normal.woff2") format("woff2")}
+@font-face{font-family:"Noto Serif";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/noto-serif-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Noto Serif";font-style:italic;font-weight:400;font-display:swap;src:url("../fonts/noto-serif-latin-400-italic.woff2") format("woff2")}
+@font-face{font-family:"Noto Serif";font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/noto-serif-latin-600-normal.woff2") format("woff2")}
